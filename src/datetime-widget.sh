@@ -5,13 +5,11 @@ enabled=$(tmux show-option -gv @tmux-tabsbar_show_datetime 2>/dev/null)
 
 root_dir="$(cd "$(dirname "${(%):-%x}")" && pwd)/.."
 current_dir="$(cd "$(dirname "${(%):-%x}")" && pwd)"
-# 注意：确保 themes.sh 路径正确
 [[ -f "$current_dir/themes.sh" ]] && source "$current_dir/themes.sh"
 
 date_format=$(tmux show-option -gv @tmux-tabsbar_date_format 2>/dev/null)
 time_format=$(tmux show-option -gv @tmux-tabsbar_time_format 2>/dev/null)
 
-# --- 格式化处理 ---
 
 case "$date_format" in
     ymd)  d_fmt="%y/%m/%d" ;;

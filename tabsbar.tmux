@@ -24,7 +24,7 @@ tmux set -g popup-border-style "fg=${THEME[blue]}"
 
 TMUX_VARS="$(tmux show -g)"
 
-default_window_id_style="digital"
+default_window_id_style="fsquare"
 default_pane_id_style="hsquare"
 default_zoom_id_style="dsquare"
 
